@@ -1,0 +1,240 @@
+/* background-color: #27343f; */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "latolight", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/back1.jpeg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.game-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #e6e6e6;
+}
+
+.game-container h1 {
+    margin: 0;
+}
+
+.stars {
+    display: inline-block;
+    margin: 0;
+}
+
+.stars li {
+    color: gold;
+    display: inline;
+}
+
+span.restart {
+    margin-left: 5rem;
+    cursor: pointer;
+}
+
+.section-deck .deck {
+    width: 520px;
+    margin: 0;
+    min-height: 540px;
+    background: linear-gradient(to bottom right, rgba(170, 207, 225, 1) 0%, rgba(170, 207, 225, 1) 50%, rgba(203, 238, 218, 1) 100%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deck .card {
+    width: 100px;
+    height: 100px;
+    background-color: #27343f;
+    color: #e6e6e6;
+    font-size: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transition: transform .7s;
+    -webkit-transition: transform .7s;
+    -moz-transition: transform .7s;
+    -ms-transition: transform .7s;
+    -o-transition: transform .7s;
+}
+
+.deck .card.open {
+    cursor: default;
+    background-color: #038ab4;
+    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+}
+
+.deck .card.show {
+    font-size: 2.8rem;
+}
+
+.deck .card.match {
+    cursor: default;
+    background-color: #0ee;
+    font-size: 2.8rem;
+    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+}
+
+.section-deck .deck .card.misMatch {
+    background-color: red;
+}
+
+.modal__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+    overflow: auto;
+}
+
+.modal__body {
+    margin: 15% auto;
+    width: 60%;
+    text-align: center;
+}
+
+.modal__body p {
+    color: #27343f;
+}
+
+.modal__icon {
+    font-size: 4rem;
+    color: #0ee;
+}
+
+.modal__heading {
+    font-weight: bold;
+}
+
+.modal__button {
+    color: #ffffff;
+    background: #0ee;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    border: 0;
+    transition: color 0.5s, background 0.5s, border 0.5s;
+    -webkit-transition: color 0.5s, background 0.5s, border 0.5s;
+    -moz-transition: color 0.5s, background 0.5s, border 0.5s;
+    -ms-transition: color 0.5s, background 0.5s, border 0.5s;
+    -o-transition: color 0.5s, background 0.5s, border 0.5s;
+}
+
+.modal__button:hover,
+.modal__button:focus {
+    color: #0ee;
+    background: #ffffff;
+    border: 1px solid #0ee;
+}
+
+@media only screen and (max-width: 540px) {
+    .section-deck {
+        margin-bottom: 20px;
+    }
+    .section-deck .deck {
+        width: 100%;
+        padding: 14px;
+        min-height: 100vh;
+    }
+    .deck .card {
+        width: 100px;
+        height: 100px;
+    }
+    .deck .card.show {
+        font-size: 2.5rem;
+    }
+    .deck .card.match {
+        font-size: 2.5rem;
+    }
+    .modal__body {
+        width: 300px;
+    }
+    .modal__title {
+        font-size: 1.8rem;
+    }
+    .modal__close {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 468px) {
+    .deck .card {
+        width: 20vw;
+        height: 12vh;
+    }
+    .deck .card.show {
+        font-size: 2rem;
+    }
+    .deck .card.match {
+        font-size: 2rem;
+    }
+    span.restart {
+        margin-left: 3rem;
+    }
+    .section-deck .deck {
+        min-height: 500px;
+    }
+}

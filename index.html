@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Memory Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/web-font-start.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Matching Game</h1>
+        </header>
+
+        <section class="score-panel">
+            <ul class="stars">
+                <li>
+                    <i class="ion-ios-star"></i>
+                </li>
+                <li>
+                    <i class="ion-ios-star"></i>
+                </li>
+                <li>
+                    <i class="ion-ios-star"></i>
+                </li>
+            </ul>
+            <span>
+                &nbsp;
+                <span class="moves">0</span> Move(s) &nbsp;&nbsp;
+            </span>
+            <span class="time">
+
+            </span>
+            <span class="restart">
+                <i class="ion-ios-refresh"></i>
+            </span>
+        </section>
+
+        <section class="section-deck">
+            <ul class="deck">
+            </ul>
+        </section>
+
+        <div class="modal__overlay display">
+            <div class="modal__body">
+                <div class="modal__icon">
+                    <span>
+                        <i class="ion-md-checkmark-circle-outline"></i>
+                    </span>
+                </div>
+                <h1 class="modal__heading">Congratulations! You Won!</h1>
+                <p class="modal__message"></p>
+                <p class="modal__shoutOut">Wooooooo!</p>
+                <button class="modal__button">Play again!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
