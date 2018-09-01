@@ -39,4 +39,4 @@ Expect a fun way to exercise your memory when you win and a congratulatory modal
 
 ### Community resources used to improve game experience
 
-* shuffle function from [LINK](http://stackoverflow.com/a/2450976)
+* shuffle function from [stackoverflow](http://stackoverflow.com/a/2450976)
